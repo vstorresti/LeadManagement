@@ -31,8 +31,6 @@ secrets.json
 **/dist/
 npm-debug.log*
 yarn-error.log
-.env
-.env.*
 
 #####################################
 # OS Specific
@@ -49,15 +47,6 @@ Desktop.ini
 # Linux
 *.swp
 *~
-
-#####################################
-# Docker
-#####################################
-
-**/docker-compose.override.yml
-**/.docker/
-**/Dockerfile*
-**/.dockerignore
 
 #####################################
 # Logs
