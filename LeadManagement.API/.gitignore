@@ -1,0 +1,16 @@
+bin/
+obj/
+*.user
+*.suo
+.vscode/
+.idea/
+*.db
+appsettings.Local.json
+appsettings.Development.json
+
+node_modules/
+build/
+.env*
+.vscode/
+.idea/
+npm-debug.log*
