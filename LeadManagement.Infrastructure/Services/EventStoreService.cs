@@ -27,13 +27,5 @@ namespace LeadManagement.Infrastructure.Services
             _context.LeadEvents.Add(leadEvent);
             await _context.SaveChangesAsync();
         }
-
-        public async Task<List<LeadEventEntity>> GetEventsForLeadAsync(int leadId)
-        {
-            return await _context.LeadEvents
-                .Where(e => e.LeadId == leadId)
-                .OrderBy(e => e.CreatedAt)
-                .ToListAsync();
-        }
     }
 }

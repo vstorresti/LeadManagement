@@ -38,7 +38,7 @@ namespace LeadManagement.Application.Handlers
             );
 
             await _leadRepository.AddAsync(lead);
-            await _eventStore.SaveEventAsync(new LeadCreatedEvent { LeadId = lead.Id, LeadSnapshot = lead });
+            await _eventStore.SaveEventAsync(new LeadCreatedEvent { LeadId = lead.Id });
             return lead.Id;
         }
     }
