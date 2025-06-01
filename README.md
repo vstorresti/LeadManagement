@@ -35,9 +35,9 @@ Sistema completo para gerenciamento de Leads, utilizando:
 
 docker-compose up --build
 
-| Serviço    | URL                                            |                          |
-| ---------- | ---------------------------------------------- | ------------------------ |
-| Backend    | [http://localhost:5000](http://localhost:5000) |                          |
-| Frontend   | [http://localhost:3000](http://localhost:3000) |                          |
-| SQL Server | localhost:1433 ( user: sa  pass: <mypassword>) |                          |
+| Serviço    | URL                                            |                                   |
+| ---------- | ---------------------------------------------- | --------------------------------- |
+| Backend    | [http://localhost:5000](http://localhost:5000) |                                   |
+| Frontend   | [http://localhost:3000](http://localhost:3000) |                                   |
+| SQL Server | localhost:1433                                 | user: sa  pass: Your_password123! |
 
