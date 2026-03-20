@@ -1,5 +1,6 @@
 using LeadManagement.API.Middlewares;
 using LeadManagement.Application.Handlers;
+using LeadManagement.Domain.Aggregates;
 using LeadManagement.Domain.Repositories;
 using LeadManagement.Infrastructure.Repositories;
 using LeadManagement.Infrastructure.Repositories.Contexts;
@@ -18,6 +19,7 @@ internal class Program
         builder.Services.AddDbContext<LeadDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+        builder.Services.AddScoped<UserAggregate>();
         builder.Services.AddScoped<ILeadRepository, LeadRepository>();
         builder.Services.AddScoped<IEventStoreService, EventStoreService>();
         builder.Services.AddScoped<IEmailService, EmailService>();
@@ -55,6 +57,7 @@ internal class Program
         }
 
         app.UseMiddleware<GlobalExceptionMiddleware>();
+        app.UseMiddleware<AuthValidationMiddleware>();
         app.UseRouting();
         app.UseCors("policy");
 
