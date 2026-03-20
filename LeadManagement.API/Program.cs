@@ -1,3 +1,4 @@
+using LeadManagement.API.Middlewares;
 using LeadManagement.Application.Handlers;
 using LeadManagement.Domain.Repositories;
 using LeadManagement.Infrastructure.Repositories;
@@ -53,6 +54,7 @@ internal class Program
             }
         }
 
+        app.UseMiddleware<GlobalExceptionMiddleware>();
         app.UseRouting();
         app.UseCors("policy");
 
